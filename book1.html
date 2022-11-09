@@ -1,0 +1,197 @@
+<html>
+<head>
+<title>Book</title>
+<script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
+<style>
+#myInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myTable {
+  border-collapse: collapse; /* Collapse borders */
+  width: 100%; /* Full-width */
+  border: 1px solid #ddd; /* Add a grey border */
+  font-size: 18px; /* Increase font-size */
+}
+
+#myTable th, #myTable td {
+  text-align: left; /* Left-align text */
+  padding: 12px; /* Add padding */
+}
+
+#myTable tr {
+  /* Add a bottom border to all table rows */
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  /* Add a grey background color to the table header and on hover */
+  background-color: #f1f1f1;
+}
+
+body {
+  overflow-y: scroll; /* Show vertical scrollbar */
+  overflow-x: scroll; /* Show horizontal scrollbar */
+}
+
+</style>
+</head>
+<body>
+
+<center>
+<h1>
+Search Title or  Author or Books or Year : <input type="text" id="gfg" onkeyup="myFunction()" placeholder="Search Here."></h1>
+</center>
+<br/>
+<table id="myTable" >
+  <tr class="header">
+    <th style="width:60%;">Title</th>
+    <th style="width:40%;">Author</th>
+    <th style="width:40%;">Subject</th>
+    <th style="width:60%;">Published</th>
+  </tr>
+<tbody id="hello">
+  <tr>
+    <td>OOPS</td>
+    <td>Bala</td>
+    <td>OOPS</td>
+    <td>2002</td>
+  </tr>
+  <tr>
+    <td>paradigm</td>
+    <td>Alen felencia</td>
+    <td>Java</td>
+    <td>2003</td>
+  </tr>
+  <tr>
+     <td>C</td>
+    <td>Bala</td>
+    <td>C</td>
+    <td>2004</td>
+  </tr>
+ <tr>
+     <td>Agriculture</td>
+    <td>flona</td>
+    <td>Agriculture</td>
+    <td>2002</td>
+  </tr>
+ <tr>
+     <td>python</td>
+    <td>keni</td>
+    <td>python</td>
+    <td>2008</td>
+  </tr>
+ <tr>
+     <td>Cybersecurity</td>
+    <td>Manii</td>
+    <td>cyberSecurity</td>
+    <td>2002</td>
+  </tr>
+ <tr>
+     <td>python</td>
+    <td>soni</td>
+    <td>python</td>
+    <td>2001</td>
+  </tr>
+ <tr>
+     <td>python</td>
+    <td>Jeni</td>
+    <td>python</td>
+    <td>2009</td>
+  </tr><tr>
+<td>RPA</td>
+    <td>Bala</td>
+    <td>RPA</td>
+    <td>2000</td>
+  </tr>
+ <tr>
+     <td>RPA</td>
+    <td>Bala</td>
+    <td>RPA</td>
+    <td>2002</td>
+  </tr>
+ <td>OOPS</td>
+    <td>Bala</td>
+    <td>OOPS</td>
+    <td>2002</td>
+  </tr>
+  <tr>
+    <td>paradigm</td>
+    <td>Alen felencia</td>
+    <td>Java</td>
+    <td>2003</td>
+  </tr>
+  <tr>
+     <td>C</td>
+    <td>Bala</td>
+    <td>C</td>
+    <td>2004</td>
+  </tr>
+ <tr>
+     <td>Agriculture</td>
+    <td>flona</td>
+    <td>Agriculture</td>
+    <td>2014</td>
+  </tr>
+ <tr>
+     <td>python</td>
+    <td>keni</td>
+    <td>python</td>
+    <td>2018</td>
+  </tr>
+ <tr>
+     <td>Cybersecurity</td>
+    <td>Manii</td>
+    <td>cyberSecurity</td>
+    <td>2011</td>
+  </tr>
+ <tr>
+     <td>python</td>
+    <td>soni</td>
+    <td>python</td>
+    <td>2009</td>
+  </tr>
+ <tr>
+     <td>python</td>
+    <td>Jeni</td>
+    <td>python</td>
+    <td>2008</td>
+  </tr><tr>
+<td>RPA</td>
+    <td>Bala</td>
+    <td>RPA</td>
+    <td>2001</td>
+  </tr>
+ <tr>
+     <td>RPA</td>
+    <td>Bala</td>
+    <td>RPA</td>
+    <td>2009</td>
+  </tr>
+</tbody>
+</table>
+
+<script>
+            $(document).ready(function() {
+                $("#gfg").on("keyup", function() {
+                    var value = $(this).val().toLowerCase();
+                    $("#hello tr").filter(function() {
+                        $(this).toggle($(this).text()
+                        .toLowerCase().indexOf(value) > -1)
+                    });
+                });
+            });
+        </script>
+
+
+</body>
+</html>
